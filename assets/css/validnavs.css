@@ -2570,7 +2570,8 @@ nav.navbar.validnavs.brand-center {
 
 	.navbar-brand>img {
 		height: auto;
-		max-height: 50px;
+		margin-left: -50%;
+		
 	}
 
 	nav.navbar.validnavs.navbar-fixed .logo-display {

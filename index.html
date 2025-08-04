@@ -865,7 +865,7 @@ button:hover {
     }
 
     .Floor-Polishing h2 {
-      font-size: 24px;
+      font-size: 40px;
       font-weight: bold;
       margin-right: 15px;
     }
@@ -1120,6 +1120,113 @@ button:hover {
 .quick-links {
   margin-bottom: 5%;
 }
+/* whatsaapp */
+/* Fixed WhatsApp Icon - Bottom Right */
+ .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-fixed img {
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+
+    .whatsapp-fixed:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-fixed {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+      }
+
+      .whatsapp-fixed img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-fixed img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+/* mobile view */
+.banner.mobile-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner.mobile-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (min-width: 769px) {
+  .mobile-banner {
+    display: none;
+  }
+}
+/* Hide by default (desktop) */
+.mobile-contact-buttons {
+  display: none;
+}
+
+/* Show only on small devices */
+@media (max-width: 768px) {
+  .mobile-contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc00; /* same yellow as your image */
+    padding: 10px;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  }
+
+  .mobile-contact-buttons .contact-btn {
+    border: 2px solid orange;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-contact-buttons .contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-contact-buttons .contact-btn i {
+    font-size: 16px;
+  }
+}
+
+
 
    </style>
  
@@ -1161,7 +1268,7 @@ button:hover {
                     <div class="social">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="https://www.facebook.com/profile.php?id=61576070910313">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
@@ -1233,7 +1340,7 @@ button:hover {
                                     </div>
                                     <div class="info">
                                         <p>Have any Questions?</p>
-                                        <h5><a href="tel:+918123038008">+918123038008</a></h5>
+                                        <h5><a href="tel:+91 9902556089">+91 9902556089</a></h5>
                                     </div>
                                 </div>
                             </li>
@@ -1258,14 +1365,12 @@ button:hover {
   <div class="banner desktop-banner">
     <div class="slider">
       <div class="slide active">
-        <img src="assets/img/service/2.png" alt="Slide 1">
+        <img src="assets/img/service/banner1.jpeg" alt="Slide 1">
       </div>
       <div class="slide">
-        <img src="assets/img/service/3.png" alt="Slide 2">
+        <img src="assets/img/service/banner2.jpeg" alt="Slide 2">
       </div>
-      <div class="slide">
-        <img src="assets/img/service/4.png" alt="Slide 3">
-      </div>
+    
 
       <!-- Navigation Buttons -->
       <div class="nav-btn left" onclick="changeSlide(-1)">❮</div>
@@ -1275,10 +1380,21 @@ button:hover {
 
   <!-- Mobile View (optional image) -->
   <div class="banner mobile-banner">
-    <img src="assets/img/service/5.png" alt="Mobile Banner" />
+    <img src="assets/img/service/mobile.jpeg" alt="Mobile Banner" />
   </div>
 
 
+<div class="mobile-contact-buttons">
+  <a href="https://wa.me/+919902556089" target="_blank" class="contact-btn whatsapp">
+    <i class="fa fa-whatsapp"></i> WhatsApp
+  </a>
+  <a href="tel:+91990255608" class="contact-btn call">
+    <i class="fa fa-phone"></i> Call
+  </a>
+  <a href="#get-quote" class="contact-btn quote">
+    <i class="fa fa-envelope"></i> Get Quote
+  </a>
+</div>
 
     <!-- End Banner -->
 
@@ -1336,11 +1452,11 @@ button:hover {
         </div>
          <div class="card"  onclick="openModal('Terrace Cleaning')">
           <img src="assets/img/gallery/Artboard 10.jpg" alt="8">
-          <p class="card-text">Terrace Cleaning</p>
+          <p class="card-text">Floor Cleaning</p>
         </div>
          <div class="card"  onclick="openModal('Tank and Sump Cleaning')">
           <img src="assets/img/gallery/Artboard 11.jpg" alt="8">
-          <p class="card-text">Tank and Sump Cleaning</p>
+          <p class="card-text">Terrace Cleaning</p>
         </div>
          <div class="card"  onclick="openModal('Varalakshmi Home Cleaning Deals')">
           <img src="assets/img/gallery/Artboard 12.jpg" alt="8">
@@ -1477,41 +1593,13 @@ button:hover {
 
 
 
- <div class="packers-section">
-    <!-- Header Section -->
-    <div class="packers-header">
-      <h2>Packers & Movers</h2>
-      <div class="customer-tag">1Lakh + Happy Customer</div>
-    </div>
 
-    <!-- Promo Card Section -->
-    <div class="promo-card">
-      <div class="promo-content">
-       <h1>Expert Home & Office Painting Services</h1>
-  <p>Affordable. Mess-Free. Guaranteed Finish.</p>
-  <p class="price">Starting at ₹5 <small>per sq.ft*</small></p>
-      </div>
-
-      <div class="promo-footer">
-        <h3>SHIFTING IN 21+ CITIES</h3>
-        <button class="book-btn" onclick="openModal('book now')">Book Now</button>
-      </div>
-    </div>
-
-    <!-- Spinning Image Row -->
-    <div class="horizontal-container">
-      <img src="assets/img/gallery/Artboard 14.jpg" alt="1" />
-      <img src="assets/img/gallery/Artboard 15.jpg" alt="2" />
-      <img src="assets/img/gallery/Artboard 18.jpg" alt="3" />
-      <img src="assets/img/gallery/Artboard 19.jpg" alt="4" />
-      <img src="assets/img/gallery/Artboard 21.jpg" alt="5" />
-      <img src="assets/img/gallery/Artboard 22.jpg" alt="6" />
-    </div>
-  </div>
 <!-- floor painting -->
 
 
- <div class="container">
+ 
+<!-- floor -->
+   <div class="container">
     <div class="Floor-Polishing">
       <h2>Floor Polishing</h2>
       <span class="shine-badge">Shine Like New</span>
@@ -1522,38 +1610,38 @@ button:hover {
       <div class="floor-card">
         <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
           <img src="assets/img/gallery/floor 1.jpg" alt="Mosaic Floor">
-
+ 
         </div>
         <div class="card-title">Mosaic Floor Polishing</div>
       </div>
 
       <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
+        <div class="card-img-wrapper"  onclick="openModal('Refrigerator Repairing')">
           <img src="assets/img/gallery/floor2.jpg" alt="Indian Marble">
-       
+         
         </div>
         <div class="card-title">Indian Marble Floor Polishing</div>
       </div>
 
       <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
+        <div class="card-img-wrapper"  onclick="openModal('Split AC Service ')">
           <img src="assets/img/gallery/floor 3.jpg" alt="Italian Marble">
-    
-        </div>
-        <div class="card-title">Granite Floor Polishing</div>
-      </div>
-
-      <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
-          <img src="assets/img/gallery/floor 4.jpg" alt="Granite Floor">
-        
+      
         </div>
         <div class="card-title">Italian Marble floor Polishing</div>
       </div>
 
+      <div class="floor-card">
+        <div class="card-img-wrapper"  onclick="openModal('Window AC Service')">
+          <img src="assets/img/gallery/floor 4.jpg" alt="Granite Floor">
+        
+        </div>
+        <div class="card-title">Granite Floor Polishing</div>
+      </div>
+      
+
     </div>
   </div>
-
 
 <!-- Appliance Services -->
 
@@ -1616,35 +1704,35 @@ button:hover {
     <div class="card-grid">
 
       <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
+        <div class="card-img-wrapper"  onclick="openModal(' Plumbing Work')">
           <img src="assets/img/gallery/home 1.jpg" alt="Mosaic Floor">
       
         </div>
-        <div class="card-title">Mosaic Floor Polishing</div>
+        <div class="card-title">Plumbing Work</div>
       </div>
 
       <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
+        <div class="card-img-wrapper"  onclick="openModal('Electrical work')">
           <img src="assets/img/gallery/home 2.jpg" alt="Indian Marble">
          
         </div>
-        <div class="card-title">Indian Marble Floor Polishing</div>
+        <div class="card-title">Electrical work</div>
       </div>
 
       <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
+        <div class="card-img-wrapper"  onclick="openModal('Carpenter work')">
           <img src="assets/img/gallery/home 3.jpg" alt="Italian Marble">
         
         </div>
-        <div class="card-title">Italian Marble floor Polishing</div>
+        <div class="card-title">Carpenter work</div>
       </div>
 
       <div class="floor-card">
-        <div class="card-img-wrapper"  onclick="openModal('Rental Painting')">
+        <div class="card-img-wrapper"  onclick="openModal('Bird Netting')">
           <img src="assets/img/gallery/home 4.jpg" alt="Granite Floor">
       
         </div>
-        <div class="card-title">Granite Floor Polishing</div>
+        <div class="card-title">Bird Netting</div>
       </div>
 
     </div>
@@ -1836,6 +1924,11 @@ button:hover {
   </div>
 </div>
 
+<!-- whatsapp -->
+ <a href="https://wa.me/+919902556089" class="whatsapp-fixed" target="_blank">
+    <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp Chat">
+  </a>
+<!-- whatsapp end -->
 
 <!-- Trigger Button -->
 
@@ -2005,36 +2098,16 @@ Services</div>
 
     <div class="sub-heading">Provided Services Across Various Cities in India</div>
     <ul class="city-list">
-      <li><a href="https://example.com/ahmedabad" target="_blank">Ahmedabad</a></li>
-      <li><a href="https://example.com/bhubaneswar" target="_blank">Bhubaneswar</a></li>
+   
       <li><a href="https://example.com/chennai" target="_blank">Chennai</a></li>
-      <li><a href="https://example.com/delhi" target="_blank">Delhi</a></li>
-      <li><a href="https://example.com/faridabad" target="_blank">Faridabad</a></li>
-      <li><a href="https://example.com/gaziabad" target="_blank">Gaziabad</a></li>
+   
       <li><a href="https://example.com/hyderabad" target="_blank">Hyderabad</a></li>
-      <li><a href="https://example.com/kochi" target="_blank">Kochi</a></li>
-      <li><a href="https://example.com/kolkata" target="_blank">Kolkata</a></li>
-      <li><a href="https://example.com/lucknow" target="_blank">Lucknow</a></li>
-      <li><a href="https://example.com/mumbai" target="_blank">Mumbai</a></li>
-      <li><a href="https://example.com/mysore" target="_blank">Mysore</a></li>
+
       <li><a href="https://example.com/delhi-ncr" target="_blank">Delhi-NCR</a></li>
-      <li><a href="https://example.com/noida" target="_blank">Noida</a></li>
-      <li><a href="https://example.com/patna" target="_blank">Patna</a></li>
-      <li><a href="https://example.com/pune" target="_blank">Pune</a></li>
-      <li><a href="https://example.com/surat" target="_blank">Surat</a></li>
-      <li><a href="https://example.com/vadodara" target="_blank">Vadodara</a></li>
-      <li><a href="https://example.com/vizag" target="_blank">Vizag</a></li>
+     
     </ul>
 
-    <div class="sub-heading">Other Services We Offer in Bangalore</div>
-    <ul class="service-list">
-      <li><a href="https://example.com/home-cleaning-bangalore" target="_blank">Home Cleaning in Bangalore</a></li>
-      <li><a href="https://example.com/pest-control-bangalore" target="_blank">Pest Control in Bangalore</a></li>
-      <li><a href="https://example.com/painting-services-bangalore" target="_blank">Painting Services in Bangalore</a></li>
-      <li><a href="https://example.com/appliance-services-bangalore" target="_blank">Appliance Services in Bangalore</a></li>
-      <li><a href="https://example.com/home-repair-bangalore" target="_blank">Home Repair Services in Bangalore</a></li>
-      <li><a href="https://example.com/facility-management-bangalore" target="_blank" >Corporate Facility Management in Bangalore</a></li>
-    </ul>
+   
   </div>
   
 
@@ -2144,7 +2217,7 @@ Services</div>
                 <div class="footer-bottom-box">
                     <div class="row">
                         <div class="col-lg-6">
-                            <p>&copy; Copyright 2025. All Rights Reserved by <a href="#">validthemes</a></p>
+                            <p>&copy; Copyright 2025. All Rights Reserved by <a href="#">proinfracrew</a></p>
                         </div>
                         <div class="col-lg-6 text-end link">
                             <ul>
@@ -2260,6 +2333,11 @@ Services</div>
       closeModal();
     }
   }
+  // whatsapp
+
+
+
+
 
   </script>
 
